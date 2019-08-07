@@ -11,9 +11,9 @@ import UIKit
 
 class Feature2View: UIView {
     
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var labelTitle: UILabel!
-    @IBOutlet weak var labelDetail: UILabel!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var labelTitle: UILabel!
+    @IBOutlet private weak var labelDetail: UILabel!
     
     private var viewModel: Feature2VCInterface!
     
