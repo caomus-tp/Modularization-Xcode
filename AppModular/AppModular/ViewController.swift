@@ -9,7 +9,6 @@
 import UIKit
 import Feature1
 import Components
-import  Feature2
 
 class ViewController: UIViewController {
     
@@ -18,20 +17,22 @@ class ViewController: UIViewController {
     
     let feature0Btn = BaseButton(frame: CGRect.zero)
     let feature1Btn = BaseButton(frame: CGRect.zero)
-    let fe2 = Feature2Modular()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        Feature1Modular.shared.delegate = self
-        fe2.delegate = self
+        Feature1Modular.shared.delegate = self    
         initView()
         setButtons()
     }
     
-    @IBAction func onShowFeature(_ sender: Any) {
-//        Feature1Modular.shared.onOpenFeature(from: self)
+    @IBAction func onShowFeatureSingleton(_ sender: Any) {
+        Feature1Modular.shared.onOpenFeature(transition: .push(vc: self))
+    }
+    
+    @IBAction func onShowFeatureObject(_ sender: Any) {
         let f1 = Feature1Modular()
-//        f1.onOpenFeature(transition: .push(vc: self))
+        //        f1.onOpenFeature(transition: .push(vc: self))
         f1.onOpenFeature(transition: .present(vc: self))
     }
 }
