@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Feature View Controller-->
+        <scene sceneID="QtK-4u-eOk">
+            <objects>
+                <viewController storyboardIdentifier="FeatureViewController" id="swL-uC-ngS" customClass="FeatureViewController" customModule="Feature1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E8G-8S-2Mq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncV-NH-15C">
+                                <rect key="frame" x="100" y="203" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="onSelectSubmit:" destination="swL-uC-ngS" eventType="touchUpInside" id="heF-GV-xzV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buJ-us-qEu">
+                                <rect key="frame" x="227" y="203" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="onSelectCancel:" destination="swL-uC-ngS" eventType="touchUpInside" id="dLJ-eL-Rfg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feature 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9Y-4K-FUQ">
+                                <rect key="frame" x="10" y="144" width="355" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cf1-Zc-cZo" firstAttribute="trailing" secondItem="buJ-us-qEu" secondAttribute="trailing" constant="100" id="2pC-lh-SaQ"/>
+                            <constraint firstItem="buJ-us-qEu" firstAttribute="top" secondItem="p9Y-4K-FUQ" secondAttribute="bottom" constant="20" id="4oj-KD-nL3"/>
+                            <constraint firstItem="cf1-Zc-cZo" firstAttribute="trailing" secondItem="p9Y-4K-FUQ" secondAttribute="trailing" constant="10" id="4vU-3d-re3"/>
+                            <constraint firstItem="p9Y-4K-FUQ" firstAttribute="leading" secondItem="cf1-Zc-cZo" secondAttribute="leading" constant="10" id="S3b-jN-7AV"/>
+                            <constraint firstItem="ncV-NH-15C" firstAttribute="top" secondItem="p9Y-4K-FUQ" secondAttribute="bottom" constant="20" id="TGR-xi-JbS"/>
+                            <constraint firstItem="p9Y-4K-FUQ" firstAttribute="top" secondItem="cf1-Zc-cZo" secondAttribute="top" constant="100" id="UjM-zo-FWa"/>
+                            <constraint firstItem="ncV-NH-15C" firstAttribute="leading" secondItem="cf1-Zc-cZo" secondAttribute="leading" constant="100" id="e8b-Qx-nfx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cf1-Zc-cZo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uu4-KF-gm7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="181"/>
+        </scene>
+    </scenes>
+</document>
